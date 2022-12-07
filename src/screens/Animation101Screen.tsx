@@ -1,9 +1,10 @@
 import React, { useRef} from 'react'
-import { View,Text,StyleSheet, Animated,Button } from 'react-native'
+import { View,Easing,StyleSheet, Animated,Button } from 'react-native'
 
 
 export const Animation101Screen = () => {
 const opacity=useRef( new Animated.Value(0)).current;
+const top=useRef( new Animated.Value(-100)).current;
 
 const fadeIn=()=>{
     Animated.timing(
@@ -14,12 +15,22 @@ const fadeIn=()=>{
             useNativeDriver:true
         }
     ).start();
+
+    Animated.timing(
+        top,
+        {
+            toValue:0,
+            duration:600,
+            useNativeDriver:true,
+            easing:Easing.bounce
+        }
+    ).start();
 }
 const fadeOut=()=>{
     Animated.timing(
         opacity,
         {
-            toValue:0.4,
+            toValue:0,
             duration:300,
             useNativeDriver:true
         }
@@ -29,7 +40,10 @@ const fadeOut=()=>{
 <View style={styles.container}>
 <Animated.View style={{
     ...styles.redBox,
-    opacity: opacity
+    opacity,
+    transform:[{
+        translateY:top
+    }]
     }}/>
      <Button
      title="FadeIn"
