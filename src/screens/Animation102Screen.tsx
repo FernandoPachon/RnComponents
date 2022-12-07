@@ -1,26 +1,53 @@
-import React from 'react'
-import { View,Text,StyleSheet } from 'react-native'
-import { style } from '../theme/appTheme';
+import React, {useRef} from 'react';
+import {View, Text, StyleSheet, Animated, PanResponder} from 'react-native';
 
 
 export const Animation102Screen = () => {
+  const pan = useRef(new Animated.ValueXY()).current;
+
+  const panResponder = PanResponder.create({
+    onStartShouldSetPanResponder: () => true,
+    onPanResponderMove: Animated.event(
+      [
+        null,
+        {
+          dx: pan.x,
+          dy: pan.y,
+        },
+      ],
+      {
+        useNativeDriver: false,
+      },
+    ),
+    onPanResponderRelease: () => {
+      Animated.spring(
+        pan, 
+        {toValue: {x: 0, y: 0}, useNativeDriver: false}, 
+      ).start();
+    },
+  });
+
   return (
-<View style={styles.container}>
-    <View style={styles.purpleBox}/>
-     <Text>Animation102Screen </Text>
-</View>
- )
+    <View style={styles.container}>
+      <Animated.View
+        {...panResponder.panHandlers}
+        style={[pan.getLayout(), styles.purpleBox]}
+      />
+      <Text>Animation102Screen </Text>
+    </View>
+  );
 };
 
-
 const styles = StyleSheet.create({
-    container: {
+  container: {
     flex: 1,
-    },
-    purpleBox:{
-        backgroundColor:"#AB01FB",
-        width:150,
-        height:150
-    }
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  purpleBox: {
+    backgroundColor: '#AB01FB',
+    width: 150,
+    height: 150,
+  },
 });
 export default Animation102Screen;
