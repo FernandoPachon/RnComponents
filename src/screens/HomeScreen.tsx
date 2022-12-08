@@ -5,24 +5,12 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import FlatListMenuItems from '../components/FlatListMenuItems';
 import { menuItems } from '../data/menuItems';
 import { MenuItem } from '../interfaces/appInterfaces';
+import HeaderTitle from '../components/HeaderTitle';
 
 
 
 
 const HomeScreen = () => {
-
-  const {top}=useSafeAreaInsets()
-
-  const renderMenuItem = (menuItem:MenuItem)=>{
-   
-  }
-  const renderListHeader=()=>{
-    return(
-      <View style={{marginTop:top + 20,marginBottom:20}}>
-         <Text style={styles.title}>Opciones de Menú</Text>
-      </View>
-    )
-  }
 
   const itemSeparator=()=>{
     return(
@@ -46,7 +34,7 @@ const HomeScreen = () => {
       data={menuItems} 
       renderItem={({item}) =><FlatListMenuItems menuItem={item}/>}
       keyExtractor={(item)=>item.name}
-      ListHeaderComponent={()=>renderListHeader()}
+      ListHeaderComponent={()=><HeaderTitle title='Opciones de menú'/>}
       ItemSeparatorComponent={itemSeparator}
        />
     </View>
