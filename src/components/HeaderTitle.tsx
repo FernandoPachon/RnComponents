@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
       title:{
         fontSize:35,
         fontWeight:'bold',
+        color:'#03DD00'
     },
     globalMargin:{
       marginHorizontal:20
