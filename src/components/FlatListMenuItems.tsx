@@ -21,7 +21,7 @@ export const FlatListMenuItems = ({menuItem}: Props) => {
       <View style={styles.container}>
         <Icon name={menuItem.icon} color="#03DD00" size={20} />
         <Text style={styles.itemText}>
-          {menuItem.name}-{menuItem.icon}
+          {menuItem.name}
         </Text>
         <View style={{flex: 1}} />
         <Icon name="caret-forward-outline" color="#03DD00" size={20} />
