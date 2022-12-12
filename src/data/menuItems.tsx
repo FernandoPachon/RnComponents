@@ -21,4 +21,19 @@ export const menuItems:MenuItem[] = [
       icon: 'notifications-outline',
       component: 'AlertScreen',
     },
+    {
+      name: 'TextImputs',
+      icon: 'chatbox-ellipses-outline',
+      component: 'TextImputScreen',
+    },
+    {
+      name: 'PullToRefrestsh',
+      icon: 'refresh-outline',
+      component: 'PullToRefrestshScreen',
+    },
+    {
+      name: 'SectionList',
+      icon: 'list-outline',
+      component: 'CustomSectionListScreen',
+    },
   ];
