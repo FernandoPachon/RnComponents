@@ -7,6 +7,8 @@ import PullToRefrestshScreen from '../screens/PullToRefrestshScreen';
 import SectionListScreen, { CustomSectionListScreen } from '../screens/CustomSectionListScreen';
 import SwitchScreen from '../screens/SwitchScreen';
 import TextImputScreen from '../screens/TextImputScreen';
+import ModalScreen from '../screens/ModalScreen';
+import InfiniteScrollScreen from '../screens/InfiniteScrollScreen';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +26,8 @@ export const Navigator=()=> {
       <Stack.Screen name="TextImputScreen" component={TextImputScreen}/>
       <Stack.Screen name="PullToRefrestshScreen" component={PullToRefrestshScreen}/>
       <Stack.Screen name="CustomSectionListScreen" component={CustomSectionListScreen}/>
+      <Stack.Screen name="ModalScreen" component={ModalScreen}/>
+      <Stack.Screen name="InfiniteScrollScreen" component={InfiniteScrollScreen}/>
     </Stack.Navigator>
   );
 }
