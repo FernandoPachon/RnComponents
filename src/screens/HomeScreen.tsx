@@ -6,25 +6,14 @@ import FlatListMenuItems from '../components/FlatListMenuItems';
 import { menuItems } from '../data/menuItems';
 import { MenuItem } from '../interfaces/appInterfaces';
 import HeaderTitle from '../components/HeaderTitle';
+import ItemSeparator from '../components/ItemSeparator';
 
 
 
 
 const HomeScreen = () => {
 
-  const itemSeparator=()=>{
-    return(
-      <View
-        style={{
-          borderBottomWidth:1,
-          opacity:0.4,
-          marginVertical:8
-        }}
-      >
 
-      </View>
-    )
-  }
   return (
     <View style={styles.container}>
 
@@ -35,7 +24,7 @@ const HomeScreen = () => {
       renderItem={({item}) =><FlatListMenuItems menuItem={item}/>}
       keyExtractor={(item)=>item.name}
       ListHeaderComponent={()=><HeaderTitle title='Opciones de menú'/>}
-      ItemSeparatorComponent={itemSeparator}
+      ItemSeparatorComponent={ItemSeparator}
        />
     </View>
   );
