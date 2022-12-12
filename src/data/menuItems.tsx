@@ -21,4 +21,9 @@ export const menuItems:MenuItem[] = [
       icon: 'notifications-outline',
       component: 'AlertScreen',
     },
+    {
+      name: 'TextImputs',
+      icon: 'chatbox-ellipses-outline',
+      component: 'TextImputScreen',
+    },
   ];
