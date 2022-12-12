@@ -3,6 +3,7 @@ import AlertScreen from '../screens/AlertScreen';
 import Animation101Screen from '../screens/Animation101Screen';
 import Animation102Screen from '../screens/Animation102Screen';
 import HomeScreen from '../screens/HomeScreen';
+import PullToRefrestshScreen from '../screens/PullToRefrestshScreen';
 import SwitchScreen from '../screens/SwitchScreen';
 import TextImputScreen from '../screens/TextImputScreen';
 
@@ -20,6 +21,7 @@ export const Navigator=()=> {
       <Stack.Screen name="SwitchScreen" component={SwitchScreen} />
       <Stack.Screen name="AlertScreen" component={AlertScreen}/>
       <Stack.Screen name="TextImputScreen" component={TextImputScreen}/>
+      <Stack.Screen name="PullToRefrestshScreen" component={PullToRefrestshScreen}/>
     </Stack.Navigator>
   );
 }

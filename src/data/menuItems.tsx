@@ -26,4 +26,9 @@ export const menuItems:MenuItem[] = [
       icon: 'chatbox-ellipses-outline',
       component: 'TextImputScreen',
     },
+    {
+      name: 'PullToRefrestsh',
+      icon: 'refresh-outline',
+      component: 'PullToRefrestshScreen',
+    },
   ];
