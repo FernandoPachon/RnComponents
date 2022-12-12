@@ -4,6 +4,7 @@ import Animation101Screen from '../screens/Animation101Screen';
 import Animation102Screen from '../screens/Animation102Screen';
 import HomeScreen from '../screens/HomeScreen';
 import PullToRefrestshScreen from '../screens/PullToRefrestshScreen';
+import SectionListScreen, { CustomSectionListScreen } from '../screens/CustomSectionListScreen';
 import SwitchScreen from '../screens/SwitchScreen';
 import TextImputScreen from '../screens/TextImputScreen';
 
@@ -22,6 +23,7 @@ export const Navigator=()=> {
       <Stack.Screen name="AlertScreen" component={AlertScreen}/>
       <Stack.Screen name="TextImputScreen" component={TextImputScreen}/>
       <Stack.Screen name="PullToRefrestshScreen" component={PullToRefrestshScreen}/>
+      <Stack.Screen name="CustomSectionListScreen" component={CustomSectionListScreen}/>
     </Stack.Navigator>
   );
 }
