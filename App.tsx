@@ -2,8 +2,9 @@
 import React from 'react'
 import { NavigationContainer,DefaultTheme,DarkTheme,Theme } from '@react-navigation/native'
 import { Navigator } from './src/navigator/Navigator'
+import { ThemeProvider } from './src/context/ThemeContext'
 
-const customTheme:Theme ={
+/* const customTheme:Theme ={
   dark:true,
   colors:{
     ...DefaultTheme.colors
@@ -12,18 +13,22 @@ const customTheme:Theme ={
     card: string;
     text: string;
     border: string;
-    notification: string; */
+    notification: string; 
   }
-}
+} */
 
  const App = () => {
   return (
-    <NavigationContainer
-      theme={customTheme}
-    >
+    <AppState>
       <Navigator/>
-    </NavigationContainer>
+    </AppState>
   )
 }
 
+const AppState=({children}:any)=>{
+
+  return(
+    <ThemeProvider>{children}</ThemeProvider>
+  )
+}
 export default App;
