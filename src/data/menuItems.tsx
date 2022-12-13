@@ -22,17 +22,17 @@ export const menuItems:MenuItem[] = [
       component: 'AlertScreen',
     },
     {
-      name: 'TextImputs',
+      name: 'Text Imputs',
       icon: 'chatbox-ellipses-outline',
       component: 'TextImputScreen',
     },
     {
-      name: 'PullToRefrestsh',
+      name: 'Pull To Refrestsh',
       icon: 'refresh-outline',
       component: 'PullToRefrestshScreen',
     },
     {
-      name: 'SectionList',
+      name: 'Section List',
       icon: 'list-outline',
       component: 'CustomSectionListScreen',
     },
@@ -42,13 +42,18 @@ export const menuItems:MenuItem[] = [
       component: 'ModalScreen',
     },
     {
-      name: 'InfiniteScroll',
+      name: 'Infinite Scroll',
       icon: 'arrow-down-outline',
       component: 'InfiniteScrollScreen',
     },
     {
-      name: 'SlidesScreen',
+      name: 'Slides',
       icon: 'flower-outline',
       component: 'SlidesScreen',
+    },
+    {
+      name: 'Change Theme',
+      icon: 'moon-outline',
+      component: 'ChangeThemeScreen',
     },
   ];

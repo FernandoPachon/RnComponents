@@ -1,5 +1,5 @@
 
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useTheme } from '@react-navigation/native';
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -11,6 +11,7 @@ interface Props {
 export const FlatListMenuItems = ({menuItem}: Props) => {
 
    const navigation = useNavigation<any>();
+  // const { colors }= useTheme();
    const  {component}=menuItem
 
   return (
